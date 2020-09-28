@@ -4,24 +4,18 @@ import mastermind.utils.WithConsoleModel;
 
 public class Mastermind extends WithConsoleModel {
 
-    private Turn[] turns;
-    private Integer currentTurn;
-    // private Pattern patternSecret;
-
+    private Board board;
+    private CodeMaker codeMaker;
+    private CodeBreaker codeBreaker;
 
     private void play() {
         Message.START_GAME.writeln();
         Message.SEPARATOR.writeln();
-        this.turns = new Turn[10];
-        this.currentTurn = 0;
-        do {
-            Message.ATTEMPT.write();
-            console.writeln(currentTurn + 1);
-            Message.PROPOSE_COMBINATION.write();
-            this.turns[currentTurn] = new Turn(console.readString());
-            this.turns[currentTurn].play();
-            currentTurn += 1;
-        } while (this.currentTurn <= turns.length);
+        board = new Board();
+        codeMaker = new CodeMaker();
+        board.fillRowSecret(codeMaker.getPatternSecret());
+        codeBreaker = new CodeBreaker();
+        //Comprobar para terminar
     }
 
     public static void main(final String[] args) throws Exception {

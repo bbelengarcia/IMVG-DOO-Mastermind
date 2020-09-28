@@ -3,31 +3,29 @@ package mastermind;
 import java.util.Arrays;
 
 public class Pattern {
+    //Si pattern es array de CodePeg
+    //private Pattern[CodePeg] pattern; // 4
 
-    private CodePeg[] codePegs; // 4
-
-    Pattern(String pattern) {
-        //this.codePegs = new CodePeg[4];
+    Pattern(CodePeg[] pattern) {
         this.checkPattern(pattern);
     }
     
-    void checkPattern(String userPattern) {
-        char [] newPattern = pattern.toCharArray();
-        for (int i = 0; i < pattern.toCharArray().length; i++){
-            //this.codePegs[i] = new CodePeg(pattern.toCharArray()[i]);
-            if( ){
-                //Arrays.toString(CodePeg.values())
-            }else{
-                Message.console.write("This choise isnt a peg");
-            }
+    void checkPattern(CodePeg[] pattern) {
+        //char [] newPattern = pattern.toCharArray();
+        for (int i = 0; i < pattern.length; i++){
+            // CodePeg.stream().forEach();
+            //if (){
+                
+            //}else{
+            //    Message.console.write("Some choise isnt a peg");
+            //}
 
         }
-        if (userPattern.length() == 4) {
-            userPattern.toCharArray();
+        if (pattern.length == 4) {
+            pattern.toCharArray();
 
         } else {
             Message.WRONG_LENGTH.writeln();
         }
     }
-
 }

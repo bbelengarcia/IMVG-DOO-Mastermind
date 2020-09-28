@@ -1,5 +1,6 @@
 package mastermind;
 
+import java.util.stream.Stream;
 import mastermind.utils.Console;
 
 enum CodePeg {
@@ -18,8 +19,8 @@ enum CodePeg {
             this.symbol = symbol;
     }
 
-    void write() {
-        CodePeg.console.write(this.symbol);
-    }
+    //void write() {
+    //    CodePeg.console.write(this.symbol);
+    //}
     
 }
