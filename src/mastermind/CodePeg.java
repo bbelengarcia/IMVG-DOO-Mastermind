@@ -11,7 +11,7 @@ enum CodePeg {
     GREEN_PEG('G'),
     BLACK_PEG('K');
 
-    ptivate char symbol;
+    private char symbol;
     private static Console console = new Console();
 
     CodePeg(char symbol) {
