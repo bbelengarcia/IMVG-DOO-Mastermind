@@ -8,7 +8,7 @@ public enum Message {
     SEPARATOR("****"),
     PROPOSE_COMBINATION("Propose a combination: "),
     WRONG_COLORS("Wrong colors, they must be: "),
-    REPETED_COLORS("Repeated colors")
+    REPETED_COLORS("Repeated colors"),
     WRONG_LENGTH("Wrong propose combination length"),
     ATTEMPT("attempt(s):"),
     ARROW("-->"),

@@ -14,7 +14,7 @@ enum CodePeg {
     private char symbol;
     private static Console console = new Console();
 
-    CodePeg(char symbol) {
+    private CodePeg(char symbol) {
         this.symbol = symbol;
     }
 
