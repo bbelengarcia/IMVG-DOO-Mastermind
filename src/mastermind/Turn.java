@@ -11,6 +11,10 @@ public class Turn extends WithConsoleModel {
     }
 
     void play() {
-       
+
+    }
+
+    void check() {
+
     }
 }

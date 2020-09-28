@@ -6,6 +6,8 @@ public class Mastermind extends WithConsoleModel {
 
     private Turn[] turns;
     private Integer currentTurn;
+    // private Pattern patternSecret;
+
 
     private void play() {
         Message.START_GAME.writeln();

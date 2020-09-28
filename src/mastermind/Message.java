@@ -16,7 +16,7 @@ public enum Message {
     REDS("reds");
 
     private String message;
-    private static Console console = new Console();
+    static Console console = new Console();
 
     private Message(String message) {
         this.message = message;
