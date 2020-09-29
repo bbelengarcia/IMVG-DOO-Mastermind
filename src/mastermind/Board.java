@@ -13,11 +13,14 @@ public class Board extends WithConsoleModel {
         //rowSecret = new RowSecret();
     }
 
-    void play(){
-        Message.ATTEMPT.write();
-        currentAttemp = currentAttemp + 1;
-        console.writeln(currentAttemp);
-        fillRowGuess(new Pattern (console.readString()));
+    void play(Pattern patternSecret){
+        fillRowSecret(patternSecret);
+        do {
+            Message.ATTEMPT.write();
+            currentAttemp = currentAttemp + 1;
+            console.writeln(currentAttemp);
+            fillRowGuess(new Pattern (console.readString()));
+        } while (currentAttemp <= rowsGuess.length);
     }
 
     void fillRowSecret(Pattern patternSecret) {

@@ -13,8 +13,9 @@ public class Mastermind extends WithConsoleModel {
         Message.SEPARATOR.writeln();
         board = new Board();
         codeMaker = new CodeMaker();
-        board.fillRowSecret(codeMaker.getPatternSecret());
+        //board.fillRowSecret(codeMaker.getPatternSecret());
         codeBreaker = new CodeBreaker();
+        board.play(codeMaker.getPatternSecret())
         //Comprobar para terminar
     }
 
