@@ -1,8 +1,5 @@
 package mastermind;
 
-import java.util.stream.Stream;
-import mastermind.utils.Console;
-
 enum CodePeg {
 
     PINK_PEG('P'),
@@ -13,14 +10,8 @@ enum CodePeg {
     BLACK_PEG('K');
 
     private char symbol;
-    private static Console console = new Console();
 
-    private CodePeg(char symbol) {
+    CodePeg(char symbol) {
             this.symbol = symbol;
     }
-
-    //void write() {
-    //    CodePeg.console.write(this.symbol);
-    //}
-    
 }

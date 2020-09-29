@@ -1,24 +1,36 @@
 package mastermind;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CodeMaker {
 
-    private CodePeg[] patternSecret;
+    private Pattern patternSecret;
 
     CodeMaker() {
         setRandom();
     }
 
-    public String getPatternSecret(){
-        return patternSecret.toString();
+    public Pattern getPatternSecret(){
+        return patternSecret;
     }
 
-    //SE PUEDE REPETIR COLOR=?????
     void setRandom(){
+        List<CodePeg> patternSecretArray = new ArrayList<>();
+        List<Integer> typeCodePeg = new ArrayList<>();
         for (int i = 0; i < 4; i++){
-            int r = (int) Math.floor(Math.random()*6+1);
+            int  r = (int) Math.floor(Math.random()*6+1);
+            while (!typeCodePeg.isEmpty() && typeCodePeg.contains(r)) {
+                r = (int) Math.floor(Math.random()*6+1);
+            }
+            typeCodePeg.add(r) ;
             var codePeg = CodePeg.values();
-            patternSecret[i] = codePeg[r];
+            patternSecretArray.add(codePeg[typeCodePeg.get(i)]);
         }
-        System.out.println(patternSecret);
+        patternSecret = new Pattern(patternSecretArray.toString());
+    }
+
+    void verifyCodeMakerPattern(Pattern pattern){
+        
     }
 }

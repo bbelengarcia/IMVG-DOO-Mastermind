@@ -11,14 +11,10 @@ public class Mastermind extends WithConsoleModel {
     private void play() {
         Message.START_GAME.writeln();
         Message.SEPARATOR.writeln();
-        board = new Board();
         codeMaker = new CodeMaker();
-        //board.fillRowSecret(codeMaker.getPatternSecret());
         codeBreaker = new CodeBreaker();
-        board.play(codeMaker.getPatternSecret())
-        //Comprobar para terminar
+        board = new Board(codeMaker.getPatternSecret());
     }
-
     public static void main(final String[] args) throws Exception {
         new Mastermind().play();
     }

@@ -1,10 +1,13 @@
 package mastermind;
 
-public class CodeBreaker {
+import mastermind.utils.WithConsoleModel;
 
-    private RowGuess [] rowsGuess; //10
+public class CodeBreaker extends WithConsoleModel {
 
-    CodeBreaker() {
+    private Pattern codeGuess;
 
-    }    
+    Pattern createCodeGuess(){
+        codeGuess = new Pattern(console.readString());
+        return codeGuess;
+    }
 }

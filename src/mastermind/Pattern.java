@@ -1,31 +1,23 @@
 package mastermind;
 
-import java.util.Arrays;
+import java.util.List;
 
 public class Pattern {
-    //Si pattern es array de CodePeg
-    //private Pattern[CodePeg] pattern; // 4
 
-    Pattern(CodePeg[] pattern) {
-        this.checkPattern(pattern);
+    private String pattern; // 4
+    private List<Character> codepeg = List.of('P', 'O', 'G', 'K', 'B', 'Y');
+
+    Pattern(String pattern) {
+        this.pattern = pattern;
     }
     
-    void checkPattern(CodePeg[] pattern) {
-        //char [] newPattern = pattern.toCharArray();
-        for (int i = 0; i < pattern.length; i++){
-            // CodePeg.stream().forEach();
-            //if (){
-                
-            //}else{
-            //    Message.console.write("Some choise isnt a peg");
-            //}
-
-        }
-        if (pattern.length == 4) {
-            pattern.toCharArray();
-
+    Boolean checkPattern() {
+        if (pattern.length() == 4) {
+            codepeg.forEach(peg -> pattern.contains(peg));
+            return true;
         } else {
             Message.WRONG_LENGTH.writeln();
+            return false;
         }
     }
 }
