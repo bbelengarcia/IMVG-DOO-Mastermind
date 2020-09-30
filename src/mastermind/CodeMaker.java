@@ -31,6 +31,8 @@ public class CodeMaker {
     }
 
     void verifyCodeMakerPattern(Pattern pattern){
-        
+        //comparar color 
+        //comparar posicion
+        //poner fichas
     }
 }

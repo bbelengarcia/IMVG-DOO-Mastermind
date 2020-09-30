@@ -14,4 +14,13 @@ enum CodePeg {
     CodePeg(char symbol) {
             this.symbol = symbol;
     }
+
+    public static boolean isCorrect(char character){
+        for(CodePeg codepeg: CodePeg.values()){
+            if(character==codepeg.symbol){
+                return true;
+            }
+        }
+        return false;
+    } 
 }
