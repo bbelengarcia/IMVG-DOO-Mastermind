@@ -17,7 +17,7 @@ enum CodePeg {
 
     public static boolean isCorrect(char character){
         for(CodePeg codepeg: CodePeg.values()){
-            if(character==codepeg.symbol){
+            if(character == codepeg.symbol){
                 return true;
             }
         }

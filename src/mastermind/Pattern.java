@@ -1,21 +1,26 @@
 package mastermind;
 
-import java.util.List;
+//import java.util.List;
 
 public class Pattern {
 
     private String pattern; // 4
+    private CodePeg codePeg;
     //private List<Character> codepeg = List.of('P', 'O', 'G', 'K', 'B', 'Y');
 
     Pattern(String pattern) {
         this.pattern = pattern;
     }
     /////////////////////////////////////////////////
+    //patron no lo sabe
     Boolean checkPattern() {
         if (pattern.length() == 4) {
             //codepeg.forEach(peg -> pattern.matches(peg.toString()));
-            //pattern.forEach()
-            //or (char c: str.toCharArray ()) { System.out.println (c); }
+            for (char peg: pattern.toCharArray ()) { 
+               if (!codePeg.isCorrect(peg)) {
+                   return false;
+               } 
+            }
             return true;
         } else {
             Message.WRONG_LENGTH.writeln();
